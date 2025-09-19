@@ -3,8 +3,8 @@ form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(event) {
   event.preventDefault()
-
-  const rating = form.rating.value
+  const ratingInput = form.elements['rating']
+  const rating = ratingInput ? ratingInput.value : null
   if (!rating) {
     alert('Please select a rating')
     return
